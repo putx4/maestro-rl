@@ -1,5 +1,7 @@
 # Maestro RL 🎮
 
+![Licencia GPL-3.0](https://img.shields.io/badge/licencia-GPL--3.0-blue)
+
 Tu **coach personal de Rocket League** con IA, 100% local.
 
 Le pasás una replay (`.replay`), el Maestro la analiza con **opencode** corriendo en tu
