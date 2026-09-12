@@ -5,21 +5,87 @@
 
 El Maestro analiza tus replays de Rocket League con Inteligencia
 Artificial y te da nota, aciertos, errores y drills de entrenamiento.
-Todo corre en tu PC: tus partidas NO salen de tu máquina.
+Tus partidas quedan en tu PC: NO se guardan ni se comparten en ningún
+sitio. El modelo de IA gratis necesita internet, pero tus replays jamás
+salen de tu máquina.
 
 ---------------------------------------
 1) REQUISITO PREVIO (IMPORTANTE)
 ---------------------------------------
 
 La app necesita que "opencode" esté instalado y corriendo.
+Aquí te explico cómo instalarlo. No tengas miedo: son pasos simples.
 
-- Instala opencode desde https://opencode.ai
-- Abre una terminal (PowerShell) y escribe:
+BUENA NOTICIA: opencode ya trae modelos de IA GRATIS por defecto.
+No hay que crear cuentas, ni API keys, ni tarjetas de crédito.
+Solo instalarlo y listo.
+
+---------------------------------------
+1A) COMO INSTALAR OPENCODE (la IA local)
+---------------------------------------
+
+OPCION A - LA MAS FACIL (necesita Node.js, es gratis):
+
+1. Descarga Node.js desde https://nodejs.org (botón verde "LTS")
+   y ejecuta el instalador.
+   Pulsa "Siguiente" hasta el final (deja las opciones por defecto).
+
+2. Abre "PowerShell": presiona la tecla Windows, escribe "PowerShell"
+   y pulsa Enter.
+
+3. Escribe esta línea y pulsa Enter:
+
+      npm install -g opencode-ai
+
+   Espera a que termine (verás una barra de progreso).
+
+4. Para comprobar que quedó bien, escribe:
+
+      opencode --version
+
+   Si ves un número de versión (ej: 0.x.x), ya está instalado.
+   Si dice "no se reconoce como un comando", cierra PowerShell y
+   ábrelo de nuevo (a veces hay que reabrir la terminal).
+
+OPCION B - SIN NODE.JS (para avanzados):
+
+- Si tienes Scoop instalado:   scoop install opencode
+- Si tienes Chocolatey:        choco install opencode
+- O descarga el binario de Windows desde
+  https://github.com/anomalyco/opencode/releases
+  (busca el archivo .zip de Windows, descomprímelo en cualquier
+  carpeta y usa ese opencode desde ahí).
+
+---------------------------------------
+1B) PONER OPENCODE EN MARCHA
+---------------------------------------
+
+Cuando ya esté instalado, en la misma terminal escribe:
 
       opencode serve
 
 - Dejala corriendo en segundo plano mientras usas el Maestro
   (no cierres esa ventana).
+
+¿TE DA ESTE ERROR?
+
+  "No se puede cargar ... opencode.ps1 porque la ejecución de
+   scripts está deshabilitada en este sistema"
+
+Es normal: Windows bloquea scripts por seguridad. La solucion, copia
+esta linea, pégala en la misma terminal y Enter:
+
+      Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+
+Te pregunta "[S] Sí  [N] No" → escribi "S" y Enter.
+CIERRA esa ventana de PowerShell y abrila de nuevo (o el comando no
+se reconocera). Despues volve a escribir:
+
+      opencode serve
+
+(Otra opcion si no quieres tocar permisos: usa el comando
+      opencode.cmd serve
+  que se salta ese bloqueo).
 
 Una sola vez, dentro de la app:
 - Ve a Ajustes → configurá tu nick (ejemplo: lacuca3000)
@@ -51,9 +117,19 @@ Las replays están en:
 4) PREGUNTAS FRECUENTES
 ---------------------------------------
 
-- ¿El análisis sale de mi PC? No. Todo corre en local.
-- ¿Necesito internet? No, solo opencode instalado.
-- ¿Necesito Node.js o Rust? No, eso solo para desarrolladores.
+- ¿El análisis y mis replays salen de mi PC? No. Tus replays quedan
+  en tu PC. Solo viaja a la nube el resumen de la partida para que el
+  modelo de IA gratis te de el consejo.
+- ¿Necesito internet? Sí, para que la IA gratis funcione (los modelos
+  gratuitos de opencode estan en la nube). Tus replays no se suben.
+- ¿Necesito cuenta, API key o tarjeta? NO. opencode trae modelos
+  GRATIS por defecto (sin registro). No hay que configurar nada.
+- ¿Necesito Node.js? Solo si instalas opencode con la OPCION A
+  (npm). Con la OPCION B no hace falta.
+- ¿Necesito Rust u otra cosa? No. Solo instalar opencode.
+- ¿Al correr "opencode serve" sale "la ejecución de scripts está
+  deshabilitada"? Es un bloqueo normal de Windows. Mira la solucion
+  al final de la seccion 1B.
 - ¿Requisitos? Windows 10/11 de 64 bits.
 
 ---------------------------------------
