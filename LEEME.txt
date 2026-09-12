@@ -1,0 +1,61 @@
+=======================================
+  MAESTRO RL — Coach de Rocket League con IA
+  Versión 0.1.0
+=======================================
+
+El Maestro analiza tus replays de Rocket League con Inteligencia
+Artificial y te da nota, aciertos, errores y drills de entrenamiento.
+Todo corre en tu PC: tus partidas NO salen de tu máquina.
+
+---------------------------------------
+1) REQUISITO PREVIO (IMPORTANTE)
+---------------------------------------
+
+La app necesita que "opencode" esté instalado y corriendo.
+
+- Instala opencode desde https://opencode.ai
+- Abre una terminal (PowerShell) y escribe:
+
+      opencode serve
+
+- Dejala corriendo en segundo plano mientras usas el Maestro
+  (no cierres esa ventana).
+
+Una sola vez, dentro de la app:
+- Ve a Ajustes → configurá tu nick (ejemplo: lacuca3000)
+- Verifica la conexión con "Probar conexión"
+
+---------------------------------------
+2) INSTALACION
+---------------------------------------
+
+1. Ejecuta "Maestro RL_0.1.0_x64-setup.exe".
+2. Si Windows muestra advertencia de SmartScreen, pulsa
+   "Más información" → "Ejecutar de todas formas"
+   (es normal: es un programa nuevo sin firmar).
+3. Sigue los pasos del instalador.
+
+---------------------------------------
+3) COMO USARLO
+---------------------------------------
+
+1. Ajustes (una sola vez): tu nick + conexión con opencode.
+2. Analizar replay: elige el archivo .replay de tu partida.
+3. Historial: guarda todos tus análisis (re-analizar o borrar).
+4. Progreso: grafica tu evolución por categoría.
+
+Las replays están en:
+    Documentos\My Games\Rocket League\TAGame\Demos
+
+---------------------------------------
+4) PREGUNTAS FRECUENTES
+---------------------------------------
+
+- ¿El análisis sale de mi PC? No. Todo corre en local.
+- ¿Necesito internet? No, solo opencode instalado.
+- ¿Necesito Node.js o Rust? No, eso solo para desarrolladores.
+- ¿Requisitos? Windows 10/11 de 64 bits.
+
+---------------------------------------
+Dudas o mejoras: es un proyecto personal de Luism.
+=======================================
